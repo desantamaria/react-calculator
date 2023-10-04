@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState } from 'react'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Button from './components/Button'
+import ButtonRow from './components/ButtonRow'
+import ButtonWrapper from './components/ButtonWrapper'
+import OutputScreen from './components/OutputScreen'
+import Wrapper from './components/Wrapper'
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+function App() {
+    return (
+        <>
+            <h1>CALCULATOR</h1>
+            <Wrapper>
+                <OutputScreen value="0"/>
+                <ButtonWrapper>
+                    <ButtonRow>
+                        <Button value="C"></Button>
+                        <Button value="+-"></Button>
+                        <Button value="%"></Button>
+                        <Button value="/"></Button>
+                    </ButtonRow>
+                    <ButtonRow>
+                        <Button value="7"></Button>
+                        <Button value="8"></Button>
+                        <Button value="9"></Button>
+                        <Button value="X"></Button>
+                    </ButtonRow>
+                    <ButtonRow>
+                        <Button value="4"></Button>
+                        <Button value="5"></Button>
+                        <Button value="6"></Button>
+                        <Button value="-"></Button>
+                    </ButtonRow>
+                    <ButtonRow>
+                        <Button value="1"></Button>
+                        <Button value="2"></Button>
+                        <Button value="3"></Button>
+                        <Button value="+"></Button>
+                    </ButtonRow>
+                    <ButtonRow>
+                    <Button value="0"></Button>
+                    <Button value="."></Button>
+                    <Button id="equal" value="="></Button>
+                    </ButtonRow>
+                </ButtonWrapper>
+            </Wrapper>
+        </>
+    )
 }
 
 export default App
