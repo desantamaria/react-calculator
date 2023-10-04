@@ -43,6 +43,7 @@ button:active {
 
 .Button {
     width: 50%;
+    min-width: 50px;
     height: auto;
 }
 
@@ -70,6 +71,8 @@ button:active {
 .Output-screen {
     height: 70px;
     width: 90%;
+    min-width: 215px;
+
     margin-bottom: 10px;
     padding: 0 10px;
     background-color: #969ea52d;
@@ -92,9 +95,11 @@ button:active {
     flex-direction: column;
 
     width: 30vw;
+    margin-right: 0;
 }
 
 #equal {
-    width: 38%;
+    width: 115%;
+    min-width: 105px;
 
 }
