@@ -45,6 +45,10 @@ button:active {
     width: 50%;
     min-width: 50px;
     height: auto;
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .Button-row {
@@ -69,9 +73,10 @@ button:active {
 }
 
 .Output-screen {
-    height: 70px;
+    height: 60px;
+    max-width:  90%;
     width: 90%;
-    min-width: 215px;
+    min-width: 210px;
 
     margin-bottom: 10px;
     padding: 0 10px;
@@ -79,13 +84,17 @@ button:active {
     border-radius: 10px;
     
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-end;
     box-sizing: border-box;
+    flex-wrap: wrap;
     
     color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 20px;
+
+    white-space: normal;
+    overflow: hidden;
 }
 
 .Wrapper {
@@ -94,12 +103,23 @@ button:active {
     align-items: center;
     flex-direction: column;
 
-    width: 30vw;
+    width: 45vw;
     margin-right: 0;
 }
 
 #equal {
-    width: 115%;
-    min-width: 105px;
+    background-color: #e0ffdb;
+}
 
+#clear {
+    background-color: #ffdbdb;
+}
+
+#delete {
+    background-color: #eae6a0;
+
+}
+
+#ans {
+    background-color: #e8dbff;
 }
