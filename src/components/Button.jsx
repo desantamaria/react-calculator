@@ -3,10 +3,17 @@ import React from "react"
 function Button(props) {
 
     const getLabel = () => {
-        if('x' == props.label) 
-            props.handleClick('*');
-        else
-            props.handleClick(props.label);
+        switch (props.label) {
+            case 'x':
+                props.handleClick('*');
+                break;
+            case '^':
+                props.handleClick('**');
+                break;
+            default:
+                props.handleClick(props.label);
+                break;
+        }
     };
 
     return (

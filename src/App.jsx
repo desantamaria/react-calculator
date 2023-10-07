@@ -24,12 +24,22 @@ function App() {
         const value = data;
         
         switch (value) {
+            case "%": {
+                const addedString = state.screenValue + " " + value + " ";
+                setState({
+                    ...state, 
+                    screenValue: addedString
+                });
+                break;
+            }
+
             case "=": {
                 if (state.screenValue !== "") {
                     var ans = "";
                     
                     try {
                         ans = eval(state.screenValue);
+                        console.log(ans);
                     } catch (err) {
                         setPrevScreenValue(state.screenValue);
                         setState({
